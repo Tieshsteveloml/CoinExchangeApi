@@ -1,0 +1,11 @@
+pycoingecko
+requests
+flask
+python-bitcoinrpc
+monero
+pymongo
+web3
+eth-account
+flask_cors
+selenium
+web3[tester]

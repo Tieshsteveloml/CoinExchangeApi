@@ -1,0 +1,103 @@
+
+
+"""Log Section"""
+PRINT_ENABLE = True
+LOG_ENABLE = True
+LOG_LEVEL = 3  # 1: DEBUG, 2: WARNING, 3: ERROR, 4: TRACK, 5: NORMAL
+LOG_FILE_PATH = "log/log.txt"
+LOG_MAX_SIZE = 1000  # unit: kbyte
+
+
+"""General Section"""
+MULTI_OUTPUTS = True
+EXCHANGE_FEE_DICT = {'WBTC': 1.0,
+                     'USDT': 1.0,
+                     'YFI': 1.0,
+                     'XMR': 1.0,
+                     'VEY': 1.0,
+                     'ETH': 1.0,
+                     'XVG': 1.0}
+EXCHANGE_EXTRA_FEE_FOR_REVERSE = 0
+LOCAL_ACCOUNT_COUNT = 20
+DEBUG_MODE_TO_RESERVE = False
+OLD_ORDER_CHECK_DAYS = 10
+USING_TEST_NET = True
+LIMIT_MIN = {'BTC': 0.001, 'XMR': 0.1, 'USDT': 100, 'YFI': 0.002, 'WBTC': 0.002, 'ETH': 0.05, 'XVG': 10}
+IS_STATIC_MIN = True
+TIMEOUTS_ORDER = {'BTC': 600, 'XMR': 1000, 'USDT': 86400, 'YFI': 86400, 'WBTC': 86400, 'ETH': 86400, 'XVG': 1000}  # seconds
+
+
+"""BitCoin Section"""
+RPC_BTC_USER = "furkan_btc_rpc"
+RPC_BTC_PASSWORD = "Furkan123"
+
+RPC_BTC_TEST_USER = "myrpc01"
+RPC_BTC_TEST_PASSWORD = "password01"
+BTC_MINING_FEE_LEVEL = 2  # 1: HIGH, 2: MEDIUM, 3: LOW
+
+BTC_FEE_HIGH_LIMIT = 5
+BTC_FEE_MEDIUM_LIMIT = 25
+BTC_FEE_LOW_LIMIT = 1008
+BTC_LOW_FEE_MIN = 10.0  # %
+
+UNDER_1_BTC = 1
+UNDER_5_BTC = 2
+UNDER_10_BTC = 3
+OVER_10_BTC = 6
+
+BTC_SPLIT_COUNT_BY_0001_AMOUNT = 0
+BTC_SPLIT_COUNT_BY_001_AMOUNT = 1
+BTC_SPLIT_COUNT_BY_01_AMOUNT = 1
+BTC_SPLIT_COUNT_BY_1_AMOUNT = 3
+
+BTC_MINER_FEE_CONFIRMATION_TARGET = 25  # 5: high, 25: medium, 1008: low
+BTC_MINER_FEE_ESTIMATE_MODE = "CONSERVATIVE"  # "UNSET", "ECONOMICAL", "CONSERVATIVE"
+BTC_MINER_FEE_BLOCK_SIZE = 199
+BTC_CW_MINIMUM_AMOUNT = 0.0001
+BTC_IS_CW_TRANSFER_TO_BLOCKCHAIN = False
+
+BLOCKCHAIN_WALLET_ID = "81b0c7f6-41cc-47b3-a02d-f0032826fd3a"
+BLOCKCHAIN_WALLET_PASSWORD = "btcmovi123#"
+
+BTC_MIN_LOAD_BALANCING_AMOUNT = 0.01
+
+"""MongoDB section"""
+MONGO_DB_SERVER = "localhost"
+MONGO_DB_PORT = 27017
+
+
+"""XMR section"""
+RPC_XMR_USER = "furkan_xmr_rpc"
+RPC_XMR_PASSWORD = "Furkan123"
+XMR_TRANSFER_PRIORITY = 2  # PRIO_UNIMPORTANT = 1, PRIO_NORMAL = 2, PRIO_ELEVATED = 3, PRIO_PRIORITY = 4
+LIMIT_XMR_BALANCE = 0.1
+
+
+"""ethereum section"""
+ETH_ACCOUNT_PASSWORD = "HcPLtF8c7DzH5Q"
+if USING_TEST_NET:
+    ETH_KEYSTORE_PATH = "/root/.test_ethereum/keystore/"
+else:
+    ETH_KEYSTORE_PATH = "/root/.ethereum/keystore/"
+ETH_LIMIT_WAIT_TIME = 36000
+ETH_GAS_FROM_API = False
+ETH_GAS_LEVEL = 'fastest'  # 'average', 'safeLow', 'fastest', 'fast'
+ETH_GAS_LIMIT = 100000  # 100000: testing mode, 1000000: production mode
+ETH_GAS_MIN_LIMIT = 21000
+ETH_LOAD_BALANCING_PERCENT = 50.0 # % 25: testing mode, 50: production mode
+ETH_LOAD_BALANCING_THRESHOLD = 1  # 0.1: testing mode, 1: production mode
+
+
+"""verge section"""
+XVG_RPC_USER = 'furkan'
+XVG_RPC_PASSWORD = 'furkan_verge'
+XVG_RPC_HOST = '127.0.0.1'
+if USING_TEST_NET:
+    XVG_RPC_PORT = 20102
+else:
+    XVG_RPC_PORT = 20102
+XVG_MINER_FEE_CONFIRMATION_TARGET = 25  # 5: high, 25: medium, 1008: low
+XVG_MINER_FEE_ESTIMATE_MODE = "CONSERVATIVE"  # "UNSET", "ECONOMICAL", "CONSERVATIVE"
+XVG_MINER_FEE_BLOCK_SIZE = 199
+XVG_LOW_FEE_MIN = 10.0  # %
+XVG_MIN_LOAD_BALANCING_AMOUNT = 100000
